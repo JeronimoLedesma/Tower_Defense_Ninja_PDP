@@ -19,7 +19,7 @@ public abstract class AbstractTowers : MonoBehaviour
     [SerializeField] protected GameObject projectilePrefab;
     [SerializeField] protected Transform projectileSpawnPoint;
 
-    protected List<GameObject> enemiesInrange = new List<GameObject>();
+    [SerializeField] protected List<GameObject> enemiesInRange = new List<GameObject>();
     protected GameObject currentTarget;
 
     #endregion
@@ -33,6 +33,11 @@ public abstract class AbstractTowers : MonoBehaviour
         price = Data.GSPrice;
 
         CanFire = true;
+    }
+
+    protected void Update()
+    {
+        currentTarget = FindTarget();
     }
 
     #region Attacking
@@ -53,14 +58,22 @@ public abstract class AbstractTowers : MonoBehaviour
     #endregion
 
     #region Targret Aquiring
-    protected void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy")) { enemiesInrange.Add(other.gameObject); }
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            enemiesInRange.Add(other.gameObject);
+            currentTarget = FindTarget();
+        }
     }
 
-    protected void OggerExit(Collider other)
+    protected void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy")) { enemiesInrange.Remove(other.gameObject); }
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            enemiesInRange.Remove(other.gameObject);
+            currentTarget = FindTarget();
+        }
     }
 
     protected GameObject FindTarget()
@@ -69,10 +82,10 @@ public abstract class AbstractTowers : MonoBehaviour
         GameObject closestEnemy = null;
         float minDistance = float.MaxValue;
 
-        if (enemiesInrange == null) { return null; }
+        if (enemiesInRange == null) { return null; }
         else
         {
-            foreach (GameObject enemy in enemiesInrange)
+            foreach (GameObject enemy in enemiesInRange)
             {
 
                 if (enemy == null) { continue; }

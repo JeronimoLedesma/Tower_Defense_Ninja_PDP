@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30bc6dda943323aa59eee701acea4602, type: 3}
   m_Name: KunaiTower
   m_EditorClassIdentifier: 
-  towerName: 
-  attackSpeed: 0
-  attackRange: 0
-  attackDamage: 0
-  price: 0
+  towerName: KunaiTower
+  attackSpeed: 1
+  attackRange: 10
+  attackDamage: 5
+  price: 100
