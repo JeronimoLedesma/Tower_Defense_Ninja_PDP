@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject[] enemyPrefabs;
+    [SerializeField] private TextMeshProUGUI waveText;
 
     [Header("Attributes")]
     [SerializeField] private int baseEnemies = 8;
@@ -21,6 +23,7 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
+    
 
     private void Awake()
     {
@@ -56,6 +59,7 @@ public class EnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(timeBetweenWaves);
         isSpawning = true;
+        waveText.text = "Wave " + currentWave;
         enemiesLeftToSpawn = EnemiesPerWave();
     }
 
