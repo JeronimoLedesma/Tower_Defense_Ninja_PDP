@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30bc6dda943323aa59eee701acea4602, type: 3}
-  m_Name: KunaiTower
+  m_Name: ShurikenTower
   m_EditorClassIdentifier: 
-  towerName: KunaiTower
-  attackSpeed: 1
-  attackRange: 10
-  attackDamage: 5
-  price: 100
+  towerName: Shuriken
+  projectilePrefab: {fileID: 3401053032410950196, guid: 751a627d06ac1b3819340bdd6a2714d7, type: 3}
+  attackSpeed: 0.8
+  attackRange: 4
+  multishot: 6
+  rotationSpeed: 0
+  price: 120
