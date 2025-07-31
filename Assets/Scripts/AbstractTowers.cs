@@ -58,14 +58,18 @@ public abstract class AbstractTowers : MonoBehaviour
 
     protected virtual void Aim()
     {
-        //Calculate direction
-        Vector2 lookDirection = currentTarget.transform.position - transform.position;
+        if (currentTarget == null) { return; }
+        else
+        {
+            //Calculate direction
+            Vector2 lookDirection = currentTarget.transform.position - transform.position;
 
-        //Calculate angle
-        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
+            //Calculate angle
+            float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
 
-        //Apply rotation
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            //Apply rotation
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        }
     }
 
     protected abstract void Fire();

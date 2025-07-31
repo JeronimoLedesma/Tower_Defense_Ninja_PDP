@@ -5,9 +5,12 @@ public class ShurikenTurret : AbstractTowers
 {
     protected override void Fire()
     {
-        StartCoroutine(ProjectileRandomizer());
-        canFire = false;
-        StartCoroutine(FireRateHandler());
+        if (currentTarget != null)
+        {
+            StartCoroutine(ProjectileRandomizer());
+            canFire = false;
+            StartCoroutine(FireRateHandler());
+        } 
     }
 
     private IEnumerator ProjectileRandomizer()

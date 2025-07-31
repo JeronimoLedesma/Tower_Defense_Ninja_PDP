@@ -5,9 +5,12 @@ public class BombTurret : AbstractTowers
 {
     protected override void Fire()
     {
-        Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
-        canFire = false;
-        StartCoroutine(FireRateHandler());
+        if (currentTarget != null)
+        {
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+            canFire = false;
+            StartCoroutine(FireRateHandler());
+        }
+        
     }
-
 }
