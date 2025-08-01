@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class EnemyBasic : Enemy
+public class EnemyBasic : MonoBehaviour
 {
-    void Update()
+    
+    /*void Update()
     {
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
@@ -27,5 +28,30 @@ public class EnemyBasic : Enemy
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.linearVelocity = direction * MoveSpeed;
-    }
+
+        if (direction.y < 0 && Mathf.Abs(direction.y) > Mathf.Abs(direction.x))
+        {
+            anim.SetBool("IsDown", true);
+            anim.SetBool("IsLeft", false);
+            anim.SetBool("IsRight", false);
+        }
+        if (direction.y > 0 && Mathf.Abs(direction.y) > Mathf.Abs(direction.x))
+        {
+            anim.SetBool("IsUp", true);
+            anim.SetBool("IsLeft", false);
+            anim.SetBool("IsRight", false);
+        }
+        if (direction.x < 0 && Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            anim.SetBool("IsLeft", true);
+            anim.SetBool("IsUp", false);
+            anim.SetBool("IsDown", false);
+        }
+        if (direction.x > 0 && Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            anim.SetBool("IsRight", true);
+            anim.SetBool("IsUp", false);
+            anim.SetBool("IsDown", false);
+        }
+    }*/
 }

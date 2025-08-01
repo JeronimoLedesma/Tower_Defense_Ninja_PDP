@@ -13,7 +13,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int baseEnemies = 8;
     [SerializeField] private float enemiesPerSecond = 0.5f;
     [SerializeField] private float timeBetweenWaves = 5f;
-    [SerializeField] private float difficultyScaleAmount = 0.75f;
+    [SerializeField] private float difficultyScale = 0.75f;
+    [SerializeField] private float enemiesPerSecondCap = 10f;
 
     [Header("Events")]
     public static UnityEvent onEnemyDestroy = new UnityEvent();
@@ -22,6 +23,7 @@ public class EnemySpawner : MonoBehaviour
     private float timeSinceLastSpawn;
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
+    private float eps;
     private bool isSpawning = false;
     
 
@@ -41,7 +43,7 @@ public class EnemySpawner : MonoBehaviour
         if (!isSpawning) return;
         timeSinceLastSpawn += Time.deltaTime;
 
-        if (timeSinceLastSpawn >= (1f/enemiesPerSecond) && enemiesLeftToSpawn > 0)
+        if (timeSinceLastSpawn >= (1f/eps) && enemiesLeftToSpawn > 0)
         {
             SpawnEnemy();
             timeSinceLastSpawn = 0f;
@@ -61,6 +63,7 @@ public class EnemySpawner : MonoBehaviour
         isSpawning = true;
         waveText.text = "Wave " + currentWave;
         enemiesLeftToSpawn = EnemiesPerWave();
+        eps = EnemiesPerSecond();
     }
 
     private void EnemyDestroyed()
@@ -84,6 +87,11 @@ public class EnemySpawner : MonoBehaviour
 
     private int EnemiesPerWave()
     {
-        return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScaleAmount));
+        return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScale));
+    }
+
+    private float EnemiesPerSecond()
+    {
+        return Mathf.Clamp((enemiesPerSecond * Mathf.Pow(currentWave, difficultyScale)), 0f, enemiesPerSecondCap);
     }
 }

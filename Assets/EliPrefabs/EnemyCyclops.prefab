@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9114947616194368497}
   - component: {fileID: 5047535211158818029}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyCyclops
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5479620187238129941, guid: a2c1cd17d2bf1914087a97e0560bce6d, type: 3}
+  m_Sprite: {fileID: 5546671543968653177, guid: 06f82fad0bed49748ba8613b5b5c3478, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -164,7 +164,7 @@ Animator:
   m_GameObject: {fileID: 4179230906687691487}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fe6a47b3a0d631e4bb87d560cb5cb9e8, type: 2}
+  m_Controller: {fileID: 9100000, guid: e72d4056a7cf2f245882a516c5d10a94, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -188,5 +188,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bdb73071cac564794103d8bcff83ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTypeData: {fileID: 11400000, guid: 94405b7b80fc1044d8a36ed4e05c95f2, type: 2}
+  enemyTypeData: {fileID: 11400000, guid: c5bb4107a0d013049845fe4e189b3e70, type: 2}
   anim: {fileID: 9114947616194368497}
