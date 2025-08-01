@@ -12,6 +12,7 @@ public class PlotBehaviour : MonoBehaviour
 
     private void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         startColor = sr.color;
     }
 
@@ -30,8 +31,13 @@ public class PlotBehaviour : MonoBehaviour
         if (tower != null) { return; }
         else
         {
-            tower = StoreManager.GetSelectedTower();
-            Instantiate(tower, transform.position, Quaternion.identity);
+
+            Towers tower = StoreManager.GetSelectedTower();
+            if (LevelManager.MainInstance.decreasecurrency(tower.cost))
+            {
+                Instantiate(tower.prefab, transform.position, Quaternion.identity);
+            }
+            
         }
     }
 }

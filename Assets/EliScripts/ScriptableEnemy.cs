@@ -5,9 +5,9 @@ public class ScriptableEnemy : ScriptableObject
 {
     [SerializeField] private float movespeed;
     [SerializeField] private float maxhealth;
-    [SerializeField] private float rewardvalue;
+    [SerializeField] private int rewardvalue;
 
     public float MoveSpeed { get { return movespeed; } }
     public float MaxHealth { get { return maxhealth; } }
-    public float RewardValue { get { return rewardvalue; } }
+    public int RewardValue { get { return rewardvalue; } }
 }
