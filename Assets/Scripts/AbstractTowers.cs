@@ -16,6 +16,7 @@ public abstract class AbstractTowers : MonoBehaviour
     protected float rotationSpeed;
     protected bool canFire;
     protected float price;
+    protected CircleCollider2D range;
     [SerializeField] protected string[] targetPriority;
 
     [Header("Links")]
@@ -39,6 +40,7 @@ public abstract class AbstractTowers : MonoBehaviour
         rotationSpeed = Data.GSRotationSpeed;
         price = Data.GSPrice;
         projectilePrefab = Data.GSProjectilePrefab;
+        /*range.radius = attackRange;*/
 
 
         canFire = true;

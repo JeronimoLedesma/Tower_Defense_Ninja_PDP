@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BasicEnemy
   m_EditorClassIdentifier: 
   movespeed: 2
-  maxhealth: 50
-  rewardvalue: 20
+  maxhealth: 20
+  rewardvalue: 50

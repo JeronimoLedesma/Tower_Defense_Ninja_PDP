@@ -12,6 +12,7 @@ public class PlotBehaviour : MonoBehaviour
 
     private void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         startColor = sr.color;
     }
 
@@ -31,7 +32,10 @@ public class PlotBehaviour : MonoBehaviour
         else
         {
             tower = StoreManager.GetSelectedTower();
-            Instantiate(tower, transform.position, Quaternion.identity);
+            if (LevelManager.MainInstance.decreasecurrency(StoreManager.payment))
+            {
+                Instantiate(tower, transform.position, Quaternion.identity);
+            }
         }
     }
 }

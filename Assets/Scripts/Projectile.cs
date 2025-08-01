@@ -52,5 +52,6 @@ public class Projectile : MonoBehaviour
         if (projectilePierce <= -1) { Destroy(gameObject); }
 
         //Damage Logic
+        if (collision.gameObject.GetComponent<Enemy>() != null) { collision.gameObject.GetComponent<Enemy>().TakeDamage(projectileDamage); }
     }
 }
