@@ -15,3 +15,4 @@ MonoBehaviour:
   movespeed: 3
   maxhealth: 30
   rewardvalue: 50
+  damage: 5

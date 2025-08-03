@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -7,6 +9,8 @@ public class LevelManager : MonoBehaviour
     public Transform startPoint;
     public Transform[] pathPoints;
     public float currency;
+    public float life = 100;
+    [SerializeField] private Slider lifeBar;
 
 
     private void Awake()
@@ -34,5 +38,15 @@ public class LevelManager : MonoBehaviour
             return false;
         }
 
+    }
+
+    public void reduceLife(float amount)
+    {
+        life -= amount;
+        lifeBar.value = life;
+        if (life <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 }

@@ -7346,6 +7346,8 @@ MonoBehaviour:
   - {fileID: 1295357839}
   - {fileID: 1885698900}
   currency: 0
+  life: 100
+  lifeBar: {fileID: 3686678111252992668}
 --- !u!4 &558320546
 Transform:
   m_ObjectHideFlags: 0
@@ -27408,6 +27410,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 589290546}
   m_SourcePrefab: {fileID: 100100000, guid: 34444938b9758a946b2c2fc75fe20347, type: 3}
+--- !u!114 &3686678111252992668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 761700029602054660, guid: 34444938b9758a946b2c2fc75fe20347, type: 3}
+  m_PrefabInstance: {fileID: 3686678111252992667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

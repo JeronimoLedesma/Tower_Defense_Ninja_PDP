@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
     private float MoveSpeed;
     private float MaxHealth;
     private float CurrentHealth;
+    private float Damage;
     private float RewardValue;
     private Rigidbody2D rb;
     private Transform target;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
         MoveSpeed = enemyTypeData.MoveSpeed;
         MaxHealth = enemyTypeData.MaxHealth;
         CurrentHealth = MaxHealth;
+        Damage = enemyTypeData.Damage;
         RewardValue = enemyTypeData.RewardValue;
         target = LevelManager.MainInstance.pathPoints[0];
         rb =GetComponent<Rigidbody2D>();
@@ -32,6 +34,7 @@ public class Enemy : MonoBehaviour
             if (pathIndex == LevelManager.MainInstance.pathPoints.Length)
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
+                LevelManager.MainInstance.reduceLife(Damage);
                 Destroy(gameObject);
                 return;
             }
