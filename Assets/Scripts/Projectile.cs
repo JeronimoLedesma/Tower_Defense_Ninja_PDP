@@ -28,6 +28,8 @@ public class Projectile : MonoBehaviour
 
         //Set Sprite
         spriteRenderer.sprite = sprite;
+
+        rb.AddForce(transform.right * projectileSpeed * Time.deltaTime);
     }
 
     private void FixedUpdate()

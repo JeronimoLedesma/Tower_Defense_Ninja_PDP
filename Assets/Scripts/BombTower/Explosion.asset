@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba249bcc8607724ba773daab475509b, type: 3}
-  m_Name: BasicEnemy
+  m_Script: {fileID: 11500000, guid: 61787569c66b10fa09e4651b602f1019, type: 3}
+  m_Name: Explosion
   m_EditorClassIdentifier: 
-  movespeed: 2
-  maxhealth: 30
-  rewardvalue: 50
-  damage: 10
+  projectileSprite: {fileID: -6607481912129624618, guid: d74fc51d6db91af4fbc7891a7416981a, type: 3}
+  projectileDamage: 30
+  projectileSpeed: 0
+  projectileLifeTime: 0.5
+  projectilePierce: 10

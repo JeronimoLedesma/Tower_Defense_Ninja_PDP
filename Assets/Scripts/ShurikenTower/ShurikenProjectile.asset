@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShurikenProjectile
   m_EditorClassIdentifier: 
   projectileSprite: {fileID: -6454969007074664543, guid: 5e15668e8ef76994fb0dc7621b37799b, type: 3}
-  projectileDamage: 6
-  projectileSpeed: 400
+  projectileDamage: 8
+  projectileSpeed: 800
   projectileLifeTime: 1.5
   projectilePierce: 0

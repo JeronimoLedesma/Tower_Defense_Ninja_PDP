@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Shuriken
   projectilePrefab: {fileID: 3401053032410950196, guid: 751a627d06ac1b3819340bdd6a2714d7, type: 3}
-  attackSpeed: 0.8
+  attackSpeed: 0.6
   attackRange: 4
   multishot: 6
   rotationSpeed: 0
-  price: 120
+  price: 350

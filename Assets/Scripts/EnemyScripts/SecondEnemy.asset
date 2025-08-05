@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SecondEnemy
   m_EditorClassIdentifier: 
   movespeed: 3
-  maxhealth: 30
+  maxhealth: 50
   rewardvalue: 50
   damage: 5

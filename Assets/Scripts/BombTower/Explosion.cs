@@ -4,6 +4,7 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     [SerializeField] private float explosionDamage;
+    [SerializeField] private ScriptableProjectile data;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: KunaiTower
   projectilePrefab: {fileID: 3401053032410950196, guid: 695dec8b9c224aaaaa22b24e6904a41f, type: 3}
-  attackSpeed: 1.2
+  attackSpeed: 1
   attackRange: 10
   multishot: 1
   rotationSpeed: 0
-  price: 100
+  price: 150

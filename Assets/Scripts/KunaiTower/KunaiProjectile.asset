@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: KunaiProjectile
   m_EditorClassIdentifier: 
   projectileSprite: {fileID: 700424582550590939, guid: 9f62cc4cc3e551344b3750c17f1e2b11, type: 3}
-  projectileDamage: 10
-  projectileSpeed: 500
+  projectileDamage: 12
+  projectileSpeed: 1200
   projectileLifeTime: 2
   projectilePierce: 2
